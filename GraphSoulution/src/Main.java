@@ -4,7 +4,7 @@ import java.util.Vector;
 
 public class Main {
 
-    public static void func(int k, int[][] matrix, int[] arr, int[] path) {
+    public static void func(int k, double[][] matrix, double[] arr, int[] path) {
 
 
         for (int s = arr.length - 2; s >= 0; s--) {
@@ -51,14 +51,16 @@ public class Main {
 
 
     public static void main(String[] args) {
+        long lBegin = System.currentTimeMillis();
+
         Matrix temp = new Matrix();
         temp.read();
         int a = temp.length;
         temp.write();
-        int[] arr = new int[temp.length];
+        double[] arr = new double[temp.length];
         int[] path = new int[temp.length];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = 100;
+            arr[i] = Double.POSITIVE_INFINITY;
             path[i] = -1;
         }
 
@@ -101,9 +103,10 @@ public class Main {
         } while(k>=0);
         System.out.println();
 
-        System.out.print("Sum="+arr[0]);
+        System.out.println("Sum="+arr[0]);
 
-
+        long lEnd = System.currentTimeMillis();
+        System.out.println(lEnd - lBegin);
 
 
         }

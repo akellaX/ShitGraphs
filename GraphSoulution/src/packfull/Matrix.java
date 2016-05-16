@@ -10,11 +10,11 @@ import java.util.Scanner;
 
 public class Matrix {
    public int length;
-   public int[][] matrix;
+   public double[][] matrix;
 
     public Matrix() {
         length = counter() + 1;
-        matrix = new int[length][length];
+        matrix = new double[length][length];
         for (int i = 0; i < length; i++)
             for (int j = 0; j < length; j++) {
                 matrix[i][j] = 0;
